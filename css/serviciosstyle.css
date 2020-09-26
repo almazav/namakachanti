@@ -77,13 +77,11 @@ header .content {
 }
 /* slideshow */
 
-header .carousel-inner, header .carousel-item {
+header .carousel1-inner, header .carousel1-item {
     height: 100%;
 }
 
-.carousel-control-prev, .carousel-control-next {
-     z-index: 7; /* dont know what is this  */
-}
+
 
 /* end of slideshow */
 header .content > div:first-of-type {
@@ -124,6 +122,27 @@ header .content a span {
     bottom: 1px;
 }
 
+
+/* about */
+
+.about {
+    padding: 50px 30px ; 
+    
+}
+/* IMAGE */
+.about .img img{
+    width: 100%;
+    height: auto;
+}
+
+.about .carousel-inner, header .carousel-item {
+    height: 100%;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    z-index: 7; /* dont know what is this  */
+}
+
 /* carousel arrows */
 .carousel-control-prev{
     position: absolute;
@@ -150,47 +169,24 @@ header .content a span {
 
 }
 
-header .carousel-control-next i, header .carousel-control-prev i {
+.about .carousel-control-next i, header .carousel-control-prev i {
     font-size: 22px;
     color: black;
 }
 
-header .carousel-control-next {
+.about .carousel-control-next {
     
     background-color: black;
-    top: 77%; /*change top arrow hight
+    top: 77%; /*change top arrow hight*/
 }
  
 
-header .carousel-control-prev {
+.about .carousel-control-prev {
     position: absolute;
-    left: auto; */
+    left: auto; 
 }
 
-/* about */
 
-.about {
-    padding: 50px 30px
-}
-/* IMAGE */
-/* .about  .img {
-    width: 95%;
-}
-
-.about .img img{
-    width: 100%;
-    height: auto;
-} */
-.about  .img .carousel-inner, .about .img.carousel-item{
-    width: 95%;
-}
-.carousel-control-prev, .carousel-control-next {
-    z-index: 7;
-}
-.about .img img{
-    width: 100%;
-    height: auto;
-}
 /* TEXT */
 .about .row > .col-lg-6:first-of-type {
     position: relative;
@@ -251,12 +247,10 @@ header .carousel-control-prev {
 
 
 
-/* footer*/
-
 footer {
-    background-color: #1b1b1a;
+    background-color: black;
     color: white;
-    padding-top: 30px
+    padding-top: 0;
 }
 
 footer .container {
@@ -264,8 +258,8 @@ footer .container {
 }
 
 footer .container .item p{
-    width: 90%;
-    line-height: 1.8;
+    width: 100%;
+    line-height: 1;
 }
 
 footer .logo {
@@ -273,19 +267,19 @@ footer .logo {
 }
 
 footer .container > .row:first-of-type {
-    padding: 25px 0
+    padding: 0;
 }
 
 footer .col-lg-9 {
-    background-color: #1b1b1a;
+    background-color: bla;
     color: white;
-    padding: 10px 5px;
+    padding: 68px 40px;
     text-align: center;
 }
 
 footer .col-lg-9 span {
     position: relative;
-    bottom: 5px;
+    bottom: 0;
 }
 
 footer .col-lg-9 i {
@@ -293,7 +287,7 @@ footer .col-lg-9 i {
 }
 
 footer .item h4 {
-    margin-bottom: 30px
+    margin-bottom: 0px;
 }
 
 footer ul {
@@ -301,9 +295,9 @@ footer ul {
 }
 
 footer ul li {
-    margin: 10px 0;
+    margin:  0;
     list-style-type: square;
-    color: #ffe25b;
+    color: rgba(10, 126, 6, 0.91);
 }
 
 footer ul li a {
@@ -311,16 +305,16 @@ footer ul li a {
 }
 
 footer ul li a:hover {
-    color: #ffe25b;
+    color: rgba(10, 126, 6, 0.91);
 }
 
 footer ul.social-media {
     overflow: hidden;
     float: center;
-    margin: 30px 0;
+    margin-left: 400px;
     clear: both;
     text-align: center;
-    border-top: 1px solid;
+    
     padding: 10px 0;
 }
 
@@ -338,7 +332,7 @@ footer form input[type="text"] {
 
 footer form input[type="submit"] {
     border: none;
-    background-color: #ffe25b;
+    background-color: rgba(10, 126, 6, 0.91);
     height: 30px;
     width: 120px;
 }
@@ -346,13 +340,15 @@ footer form input[type="submit"] {
 footer .copyright {
     clear: both;
     text-align: center;
-    border-top: 1px solid;
-    padding: 10px 0;
+    border-top: 0px solid;
+    padding: 0 0;
+    color: black;
 }
 
 footer .copyright p {
     margin-bottom: 0;
 }
+
 
 /* media queries */
 
@@ -406,7 +402,7 @@ footer .copyright p {
     /* footer */
     
     footer .logo {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         display: block;
     }
     footer .container > .row:nth-of-type(2) > div {

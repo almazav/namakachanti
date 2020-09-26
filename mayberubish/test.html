@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nuestros Servicios</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/fontawesome.min.css">
+        <link rel="stylesheet" href="css/serviciosstyle.css">
+    </head>
+    <body>
+        
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="img/logo_transparent.png" width="100" height="100" alt="logo" /></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-links" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse text-capitalize" id="nav-links">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="inicio.html">Inicio <span class="sr-only"></span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#paisajismo">Paisajismo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sustentabilidad">Proyectos De Sustentabilidad</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#interiorismo">Interiorismo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#huertos">Huertos Urbanos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#roof">Roof Gardens</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contactanos</a>
+                        </li>
+                       
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <header id="home">
+            <div class="content">
+                <div class="d-flex align-items-center flex-column justify-content-center">
+                    <h1>Nuestros Servicios</h1>
+                    <p>namaka chanti es una tendencia en relacion a la naturaleza, comprometidos con el medio ambiente y la ecologia.
+                        nos encargamos de armonizar espacios , de la mano con la tecnologia y el confort.</p>
+                    <a href="galeria.html">
+                        <span>Galeria</span>
+                        <i class= "fas fa-camera-retro"></i>
+                    </a>
+                </div>
+            </div>
+              <div class="carousel-item active">
+                <img src="img/img2.jpg" class="d-block w-100">
+              </div>
+                         
+     </header>
+        
+        <div class="about" id="paisajismo">
+            <div class="row">
+               
+                <div class="col-lg-6 col-12 text-left">
+                    <div class="about-child">
+                        <h2 class="text-uppercase">Paisajismo</h2>
+                        <p>Get full range of premium I</p>
+                        <p>Lorem ipsum dolor sit amet kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk</p>
+                       
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    
+                        <div class="img"><img src="img/img4.jpg" style="float:right" name ="slide">
+                        </div>    
+                    
+                </div>
+            </div>
+        </div>
+        
+       
+        <div class="contact" id="contact">
+            <div class="container"><h2 class="text-capitalize">Contacto</h2></div>
+            <div class="contact-child">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-12">
+                            <div class="contact-form">
+                                <form>
+                                    <input type="text" placeholder="Nombre">
+                                    <input type="text" placeholder="Telefono">
+                                    <input type="email" placeholder="Email">
+                                    <textarea placeholder="Mensaje"></textarea>
+                                    <input type="submit" value="enviar" class="text-uppercase">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+       
+        
+       
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script>
+            $(function () {
+                
+                'use strict';
+                
+                var winH = $(window).height();
+                
+                $('header, .slide').height(winH);
+                
+                $('.navbar a.search-link').on('click', function () {
+                    $(this).siblings('form').fadeToggle();
+                });
+                
+                $('.navbar ul.navbar-nav li a, footer ul.main-list li a').on('click', function (e) {
+                    
+                    var getAttr = $(this).attr('href');
+                    
+                    e.preventDefault();
+                    $('html').animate({scrollTop: $(getAttr).offset().top}, 1000);
+                });
+            });
+            var i = 0;
+            var images =[];
+            var time = 3000;
+
+            // IMAGE LIST
+
+            images[0]='img/img4.jpg';
+            images[1]='img/img3.jpg';
+            images[2]='img/img2.jpg';
+
+            //CHANGE IMAGE
+
+            function changeImage(){
+                document.slide.src = images[i];
+
+                if(i < images.length -1){
+                    i++;
+                } else {
+                    i = 0;
+                }
+                setTimeout("changeImage()", time);
+            }
+            window.onload = changeImage;
+
+        </script>
+    </body>
+</html>

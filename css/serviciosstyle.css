@@ -391,7 +391,18 @@ footer .copyright p {
         margin: 0 auto;
     }
     
+    /* service */
     
+    .services .col-lg-4 {
+        margin-bottom: 30px
+    }
+    
+    /* project */
+    
+    .project .col-lg-4 {
+        position: static;
+        margin-bottom: 25px
+    }
     
     /* contact */
     
@@ -402,7 +413,7 @@ footer .copyright p {
     /* footer */
     
     footer .logo {
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         display: block;
     }
     footer .container > .row:nth-of-type(2) > div {
